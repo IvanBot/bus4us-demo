@@ -1,0 +1,62 @@
+.logo{
+    background:#ffc333;
+    border:0px;
+    color:#000;
+}
+.logo img[src='img/logo.png']{
+    height:30px;
+    position:relative;
+    bottom:0;
+}
+.logo img[src='img/logo2.png']{
+    height:120px;
+    position:relative;
+    bottom:0;
+}
+
+.big_text{
+    font-size:1.5em;
+    font-weight:bold;
+}
+
+.big_middle_text{
+    font-size:1em;
+    line-height:1em;
+    font-weight:bold;
+}
+
+.middle_text{
+    font-size:1em;
+    font-weight:bold;
+}
+
+.small_text{
+    font-size:0.75em;
+}
+
+#main_logo{
+    width:140px;
+    height:auto;
+}
+
+#main_logo2{
+    width:150px;
+    height:auto;
+}
+
+.bus_classes{
+    height:100px;
+    font-size:0.9em;
+    //font-weight:bold;
+    color:#000;
+    padding-top:5px;
+    line-height:1em;
+}
+
+.bus_classes img{
+    height:40px;
+}
+
+.webix_selected{
+    background:#ffc333!important;
+}
