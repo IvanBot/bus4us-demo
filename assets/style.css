@@ -1,0 +1,114 @@
+.logo{
+    background:#ffc333;
+    border:0px;
+    color:#000;
+}
+.logo img[src='img/logo.png']{
+    height:30px;
+    position:relative;
+    bottom:0;
+}
+.logo img[src='img/logo2.png']{
+    height:120px;
+    position:relative;
+    bottom:0;
+}
+
+.big_text{
+    font-size:1.5em;
+    font-weight:bold;
+}
+
+.big_middle_text{
+    font-size:1em;
+    line-height:1em;
+    font-weight:bold;
+}
+
+.middle_text{
+    font-size:1em;
+    font-weight:bold;
+}
+
+.small_text{
+    font-size:0.75em;
+}
+
+#main_logo{
+    width:140px;
+    height:auto;
+}
+
+#main_logo2{
+    width:150px;
+    height:auto;
+}
+
+.car_classes {
+    display: flex;
+}
+
+.webix_dataview_item:parent {}
+
+.bus_classes{
+    flex: 1;
+    height:100px;
+    font-size:0.9em;
+    //font-weight:bold;
+    color:#000;
+    padding-top:5px;
+    line-height:1em;
+}
+
+.bus_classes img{
+    height:40px;
+}
+
+.webix_selected{
+    background:#ffc333!important;
+}
+
+.order_map {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    padding-left: 20px;
+}
+
+.order_map .webix_icon {
+    font-size: 36px !important;
+}
+
+.mycls .webix_list_item {
+    overflow: auto !important;
+    height: auto !important;
+}
+
+.mycls {
+    max-width: 420px !important;
+    margin: auto;
+}
+
+.menu_icon {
+    /*flex: 1;*/
+    width: 80px;
+}
+
+.menu_text {
+    flex: 1;
+}
+
+.menu_text:first-child  {
+    font-weight: bold !important;
+}
+
+.menu_text p {
+    margin: 0px;
+}
+
+.menu_text h1 {
+    margin: 0px;
+    font-size: 1em;
+    font-weight: bold;
+}
