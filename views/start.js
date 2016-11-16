@@ -4,8 +4,6 @@ define ([
 	"views/menu.js"
 ], function (app, menu) {
 
-	webix.ui(menu.$ui);
-
 	var nav = {
 		css:"logo",
 		view:"icon",
@@ -16,7 +14,7 @@ define ([
             // 1. get id [menu] from module menu.js
             // 2. show/hide menu
             // if ( $$("menu").config.hidden ) {
-
+            	menu.show_panel();
                 console.log( menu );
                 console.log( $$("menu") );
             // }

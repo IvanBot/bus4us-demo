@@ -77,7 +77,7 @@ define([], function() {
 
 	var ui = {
 		view: "sidemenu",
-	    id: menu_id,
+	    id: "menu",
 	    width: 250,
 	    position: "left",
 	    // state:function(state){
@@ -89,7 +89,10 @@ define([], function() {
 	}
 
 	return {
-		$ui: ui
+		$ui: ui,
+		show_panel: function() {
+			$$("menu").show();
+		}
 	} 
 
 });
