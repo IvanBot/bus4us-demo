@@ -90,9 +90,7 @@ define([], function() {
 
 	return {
 		$ui: ui,
-		show_panel: function() {
-			$$("menu").show();
-		}
-	} 
+		$windows: ui
+	}
 
 });
