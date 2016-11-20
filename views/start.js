@@ -11,12 +11,12 @@ define ([
         click: function() {
             
 
-            // 1. get id [menu] from module menu.js
-            // 2. show/hide menu
             // if ( $$("menu").config.hidden ) {
-            	menu.show_panel();
+            	// menu.show_panel();
                 console.log( menu );
-                console.log( $$("menu") );
+                // console.log( $$("menu") );
+				// menu.log();
+                
             // }
             // else {
             //      $$("menu").hide();	
@@ -68,10 +68,14 @@ define ([
 
 
 
+
 	var ui = {
         	id: "ui", 
 	        rows: [ toolbar, main ]
     };
+
+    	
+
 
         // $$("main_menu").select("create_order");
         // auth.get_car_classes();

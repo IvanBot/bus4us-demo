@@ -1,6 +1,6 @@
 define([], function() {
 
-	var url = "http://84.16.157.58:8085/bus4usclientservlet";    
+	var url = "http://84.16.157.58:8085/bus4usclientservlet";
 
     var credit_card = { template:"credit card" };
     var myBalance = "-";
@@ -23,14 +23,14 @@ define([], function() {
 	    ]
 	};
 
-	var balance = { 
+	var balance = {
 		height: 30,
-		template: "<center><b><i class='fa fa-money' aria-hidden='true'></i> " + myBalance + " ₽</b></center>" 
+		template: "<center><b><i class='fa fa-money' aria-hidden='true'></i> " + myBalance + " ₽</b></center>"
 	};
 
 	var menu = {
 	    id:"main_menu", view:"menu", layout:"y", borderless:true, scroll: false, height:160, template: "<span class='webix_icon fa-#icon#'></span> #value#",
-	    
+
 	    data:[
 	        { $template:"Separator" },
 	        {id:"create_order", value:"Создать заказ", icon:"bus"},
@@ -46,7 +46,7 @@ define([], function() {
 	    click:function(id){
 	        if(id=="my_orders") get_orders();
 	        if(id=="my_history") get_history();
-	        
+
 	        $$("main").showBatch(id);
 	        $$("header").define({template:"<center><span class='big_middle_text'>"+this.getItem(id).value+"</span></center>"});
 	        $$("header").refresh();
@@ -90,9 +90,9 @@ define([], function() {
 
 	return {
 		$ui: ui,
-		show_panel: function() {
-			$$("menu").show();
+		log: function() {
+			console.log(11);
 		}
-	} 
+	}
 
 });
