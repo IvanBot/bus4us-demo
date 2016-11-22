@@ -1,5 +1,11 @@
 define(function() {
 
+    var url = "http://84.16.157.58:8085/bus4usclientservlet",
+        credit_card = { template:"credit card" },
+        myBalance = "-",
+        myPhone = "-",
+        myId = "-";
+
     var send_number = function () {
         var requestCode = {};
         requestCode.phoneNumber = "";

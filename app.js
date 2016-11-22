@@ -5,20 +5,20 @@
 // requirejs.config({
 // 	baseUrl: 'libs'
 // });
-
-require.config({
-  paths: {
-    webix: 'libs/webix/webix'
-    // underscore: 'libs/underscore/underscore',
-    // backbone: 'libs/backbone/backbone'
-  }
-
-});
-
-require(['views/main'], function (main) {
-    
-    console.log(main.init);
-});
+// 
+// require.config({
+//   paths: {
+//     webix: 'libs/webix/webix'
+//     // underscore: 'libs/underscore/underscore',
+//     // backbone: 'libs/backbone/backbone'
+//   }
+//
+// });
+//
+// require(['views/main'], function (main) {
+//
+//     console.log(main.init);
+// });
 
 // require([
 //     "webix"
@@ -26,7 +26,7 @@ require(['views/main'], function (main) {
 //     webix.ready(function() {
 //         console.log("webix ready event");
 //     });
-// })    
+// })
 
 
 // define([
