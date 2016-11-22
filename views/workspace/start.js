@@ -1,7 +1,8 @@
 define( function(require) {
 
     // subdivsion
-    var order = require('./order');
+    var order = require('./order/init');
+    console.log(order);
 
     // data
     var data = require('modals/data');
@@ -32,14 +33,14 @@ define( function(require) {
             },
             {
                 id:"main",
-                // visibleBatch:"create_order",
+                visibleBatch:"create_order",
                 height:"auto",
                 rows: [
                     {
                         rows: [
                             {
                                 animate: false,
-                                cells: [ order.create ]
+                                cells: [ order ]
                             }
                         ],
                         batch:"create_order"

@@ -1,5 +1,7 @@
 define( function(require) {
 
+    var create = require('./creation');
+
     var map_order = {
         id:"map_order",
         view:"menu",
@@ -43,7 +45,8 @@ define( function(require) {
                         view:"button",
                         value:"Создать заказ",
                         click:function() {
-                            $$('create_order').showBatch('map_order');
+                            create();
+                            // $$('create_order').showBatch('map_order');
                         }
                     },
                     {}
@@ -53,7 +56,7 @@ define( function(require) {
         ]
     }
 
-    var create = {
+    var form = {
         rows:[
             {
                 view:"scrollview", height:100, scroll:"x",
@@ -103,8 +106,6 @@ define( function(require) {
         ]
     };
 
-    return {
-        create: create
-    }
+    return form;
 
 });
