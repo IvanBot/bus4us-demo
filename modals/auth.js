@@ -1,4 +1,4 @@
-define( [], function() {
+define(function() {
 
     var send_number = function () {
         var requestCode = {};
@@ -16,7 +16,7 @@ define( [], function() {
                     webix.message({"type":"error", "text":"Ошибка сервера - запрос кода по телефону: ответа нет"});
                 },
                 success:function(text, data, XmlHttpRequest) {
-                    
+
                     text = JSON.parse(text);
                     if(text.error==0){
                         webix.storage.cookie.put('phoneNumber',$$("phoneNumber").getValue());
@@ -69,8 +69,8 @@ define( [], function() {
         console.log(arr_result);
 
         webix.ajax().sync().post(
-            url, 
-            arr_result, 
+            url,
+            arr_result,
             {
                 error: function (text, data, XmlHttpRequest) {
                     webix.message({"type":"error", "text":"Ошибка сервера - запрос токена"});
@@ -88,7 +88,7 @@ define( [], function() {
 
             }
         );
-        
+
         return result;
     };
 

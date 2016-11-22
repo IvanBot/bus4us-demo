@@ -6,8 +6,6 @@ require.config({
  	}
 });
 
-require(['views/main'], function (main) {
-    console.log(main.init);
-});
-
-console.log('lorem ipsum');
+define(['domReady','webix'], function () {
+	require(['views/main']);
+})
