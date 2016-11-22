@@ -15,7 +15,7 @@ define ([
             // 2. show/hide menu
             // if ( $$("menu").config.hidden ) {
             	// menu.show_panel();
-                console.log( menu );
+                console.log( menu.some() );
                 console.log( $$("menu") );
             // }
             // else {

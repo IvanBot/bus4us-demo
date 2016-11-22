@@ -90,7 +90,9 @@ define([], function() {
 
 	return {
 		$ui: ui,
-		$windows: ui
+		some: function(view, $scope){
+    		ui.$scope( {view: "sidemenu", id: "menu"} ).show();
+		}
 	}
 
 });
