@@ -1,8 +1,11 @@
 define( function (require) {
 
-    var auth  = require('modals/auth');
-    var intro = require('views/intro');
-    var start = require('views/workspace/start');
+    var auth       = require('modals/auth');
+    var intro      = require('views/intro');
+    var start      = require('views/workspace/start');
+    var google_map = require('modals/googlemap');
+
+    webix.protoUI(google_map, webix.ui.view);
 
     // workspace
     if (auth.check_token()) {

@@ -2,7 +2,6 @@ define( function(require) {
 
     // subdivsion
     var order = require('./order');
-    console.log(order);
 
     // data
     var data = require('modals/data');
@@ -28,27 +27,35 @@ define( function(require) {
                             { id:"header", css:"logo", height:25, template:"<center><span class='big_middle_text'>Создать заказ</span></center>" },
                         ]
                     },
-                    { css:"logo", width:105, template:"<img src='img/logo.png'>" }
+                    { css:"logo", width:105, template:"<img src='assets/img/logo.png'>" }
                 ]
             },
             {
                 id:"main",
                 // visibleBatch:"create_order",
                 height:"auto",
-                rows:[
-                    {rows:[{animate: false,cells:[order.create]}], batch:"create_order"},
+                rows: [
+                    {
+                        rows: [
+                            {
+                                animate: false,
+                                cells: [ order.create ]
+                            }
+                        ],
+                        batch:"create_order"
+                    },
                     // {rows:[{animate: false,cells:[my_orders]}], batch:"my_orders"},
                     // {rows:[{animate: false,cells:[my_history]}], batch:"my_history"},
                     // {rows:[{animate: false,cells:[credit_card]}], batch:"credit_card"},
 
                     // Оформление заказа
-                    {template: 'ДАТА',  batch:"create_order_date"},
-                    {template: 'ПАССАЖИРЫ', batch:"create_order_passengers"},
-                    {template: 'ДЕТИ', batch:"create_order_childer"},
-                    {template: 'ДОПОЛНИТЕЛЬНО', batch:"create_order_addition"},
-                    {template: 'МАРШРУТ', batch:"create_order_route"},
-                    {template: 'КОНТАКТЫ', batch:"create_order_contact"},
-                    {template: 'КОММЕНТАРИЙ', batch:"create_order_comment"}
+                    // {template: 'ДАТА',  batch:"create_order_date"},
+                    // {template: 'ПАССАЖИРЫ', batch:"create_order_passengers"},
+                    // {template: 'ДЕТИ', batch:"create_order_childer"},
+                    // {template: 'ДОПОЛНИТЕЛЬНО', batch:"create_order_addition"},
+                    // {template: 'МАРШРУТ', batch:"create_order_route"},
+                    // {template: 'КОНТАКТЫ', batch:"create_order_contact"},
+                    // {template: 'КОММЕНТАРИЙ', batch:"create_order_comment"}
                 ]
             }
         ]
@@ -70,11 +77,11 @@ define( function(require) {
                         { width:10, css:"logo" },
                         {
                             rows:[
-                                { css:"logo", template:"<img src='img/logo.png'>", width:100 },
+                                { css:"logo", template:"<img src='assets/img/logo.png'>", width:100 },
                                 { css:"logo", template:"<br><b>" + data.my_phone + "<br>" + data.my_id + "</br>" }
                             ]
                         },
-                        { css:"logo", template:"<img src='img/logo2.png'>" }
+                        { css:"logo", template:"<img src='assets/img/logo2.png'>" }
                     ]
                 },
                 { height:30, template:"<center><b><i class='fa fa-money' aria-hidden='true'></i> "+ data.my_balance + " ₽</b></center>" },
