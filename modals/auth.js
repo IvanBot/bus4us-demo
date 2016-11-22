@@ -1,5 +1,11 @@
 define(function() {
 
+    var url = "http://84.16.157.58:8085/bus4usclientservlet",
+        credit_card = { template:"credit card" },
+        myBalance = "-",
+        myPhone = "-",
+        myId = "-";
+
     var send_number = function () {
         var requestCode = {};
         requestCode.phoneNumber = "";
@@ -103,13 +109,13 @@ define(function() {
         if(txt.error==0) {
             //console.log(txt.carClasses);
             var data_bus_classes = [
-                {id:1, name:"Городской<br>автобус", imgsrc:"<img src='img/urbanbus.png'>", popup:"my_pop"},
-                {id:2, name:"Международный<br>автобус", imgsrc:"<img src='img/internationalbus_disabled.png'>"},
-                {id:3, name:"Мидиавтобус", imgsrc:"<img src='img/midibus.png'>"},
-                {id:4, name:"Микроавтобус", imgsrc:"<img src='img/microbus_disabled.png'>"},
-                {id:5, name:"Школьный<br>автобус", imgsrc:"<img src='img/schoolbus.png'>"},
-                {id:6, name:"Пригородный<br>автобус", imgsrc:"<img src='img/surbanbus_disabled.png'>"},
-                {id:7, name:"Туристический<br>автобус", imgsrc:"<img src='img/turistbus.png'>"}
+                {id:1, name:"Городской<br>автобус", imgsrc:"<img src='assets/img/urbanbus.png'>", popup:"my_pop"},
+                {id:2, name:"Международный<br>автобус", imgsrc:"<img src='assets/img/internationalbus_disabled.png'>"},
+                {id:3, name:"Мидиавтобус", imgsrc:"<img src='assets/img/midibus.png'>"},
+                {id:4, name:"Микроавтобус", imgsrc:"<img src='assets/img/microbus_disabled.png'>"},
+                {id:5, name:"Школьный<br>автобус", imgsrc:"<img src='assets/img/schoolbus.png'>"},
+                {id:6, name:"Пригородный<br>автобус", imgsrc:"<img src='assets/img/surbanbus_disabled.png'>"},
+                {id:7, name:"Туристический<br>автобус", imgsrc:"<img src='assets/img/turistbus.png'>"}
             ];
             $$("car_classes").define({data:data_bus_classes});
             $$("car_classes").refresh();
