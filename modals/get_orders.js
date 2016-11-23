@@ -2,7 +2,7 @@ define( function(require) {
 
 	var data = require('./data');
 
-	var result = JSON.stringify({
+	var request = JSON.stringify({
 		"getOrders":
     	{
         	"token": webix.storage.cookie.get('token')
@@ -13,24 +13,37 @@ define( function(require) {
 
 
 
-	var request = function() {
+	var get_orders = function() {
 
-		// var xhr = new XMLHttpRequest();
-		// xhr.open('POST', data.url, false);
-		// xhr.send(result);
+	    webix.ajax().sync().post(
+	    	data.url,
+	    	request,
+	    	 {
+                error: function (text, data, XmlHttpRequest) {
+                    webix.message({
+                        "type": "error",
+                        "text": "Ошибка сервера - запрос списка заказов: ответа нет"
+                    });
+                },
+                success: function (text, data, XmlHttpRequest) {
+                    text = JSON.parse(text);
+                    if (text.error == 0) {
+                    	
+                    	// Array with orders
+                    	console.log(text.ordersList);
+                    	var _dev_data = text.ordersList;
 
-		// if (xhr.status != 200) {
-		// 	console.log( xhr );
-		// } else {
-		// // вывести результат
-		// 	console.log( xhr.responseText ); // responseText -- текст ответа.
-		// }
 
-
-	    webix.ajax().sync().post(data.url, result);
-	    
+                    }
+                    else webix.message({
+                        "type": "error",
+                        "text": "Ошибка сервера - запроссписка заказов: ответ получен"
+                    });
+                }
+            }
+	    );
 	    
 	};
 
-	return request;
+	return get_orders;
 });

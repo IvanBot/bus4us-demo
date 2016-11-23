@@ -1,7 +1,8 @@
 define( function(require) {
 
     // data
-    var data = require('modals/data');
+    var data       = require('modals/data');
+    var get_orders = require('modals/get_orders');
 
 	var sidemenu_logo = [{
         width:10,

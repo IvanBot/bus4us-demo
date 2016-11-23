@@ -2,12 +2,15 @@ define( function (require) {
 
     var auth       = require('modals/auth');
     var google_map = require('modals/googlemap');
+    // var store      = require('modals/data');
     
     var intro      = require('views/intro');
     var sidemenu   = require('views/workspace/sidemenu');
     var main_view  = require('views/workspace/mainview');
 
+    // webix.ui(store);
     webix.protoUI(google_map, webix.ui.view);
+
 
     // workspace
     if (auth.check_token()) {
