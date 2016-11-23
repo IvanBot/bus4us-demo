@@ -32,6 +32,7 @@ define( function(require) {
                     	// Array with orders
                     	console.log(text.ordersList);
                     	var _dev_data = text.ordersList;
+                    	
 
 
                     }
